@@ -1,3 +1,10 @@
-<div>
-    ABC
+<div class="card">
+    <img [src]="user.picture">
+    <h1>Hello {{user.name}} </h1>
+    <p>Âge : {{user.age}}</p>
+    <div>
+        <p>Citation : {{user.quote}}</p>
+        <input [(ngModel)]="user.quote">
+    </div>
 </div>
+
