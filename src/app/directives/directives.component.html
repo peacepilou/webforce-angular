@@ -1,0 +1,14 @@
+<h1>Ingrédients pour une bonne raclette</h1>
+<ul>
+    <li>Cornichons</li>
+    <li [ngClass]="{'isVital': isVital}">Fromage</li>
+    <li [ngStyle]="{'background-color': isVital ? 'red' : ''}">Pommes de terre</li>
+</ul>
+
+<button (click)="switchAdmin()">Changer l'état</button>
+<div *ngIf="isAdmin">
+    <h2>Ces animaux s'affichent uniquement lorsque je suis administrateur</h2>
+    <div *ngFor="let animal of animals">
+        <li>{{animal}}</li>
+    </div>
+</div>
