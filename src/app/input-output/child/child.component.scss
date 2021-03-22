@@ -1,0 +1,18 @@
+div {
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    
+    p {
+        margin: 15px;
+    }
+    span {
+        font-weight: bold;
+        color: #5d48ffff;
+    }
+}

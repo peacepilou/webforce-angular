@@ -1,0 +1,13 @@
+<div class="container">
+    <div>
+        <h1>Composant <span>parent</span></h1>
+        <h2>Input</h2>
+        <p>Composant depuis lequel je transmets les données</p>
+        <p><span>Donnée transmise :</span> {{parentData}}</p>
+        <h2>Output</h2>
+        <p>Je reçois la donnée de l'enfant</p>
+        <p><span>Donnée reçue de l'enfant :</span> {{dataFromChild}}</p>
+    </div>
+    
+    <app-child [childData]="parentData" (dataEmitFromChild)="dataReceiveFromChild($event)"></app-child>
+</div>

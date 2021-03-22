@@ -12,6 +12,8 @@ import { DirectivesComponent } from './directives/directives.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ParentComponent } from './input-output/parent/parent.component';
+import { ChildComponent } from './input-output/child/child.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { FooterComponent } from './footer/footer.component';
     DirectivesComponent,
     PageNotFoundComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // Et celle-ci
+    FormsModule, // Et celle-ci
   ],
   providers: [],
   bootstrap: [AppComponent]
