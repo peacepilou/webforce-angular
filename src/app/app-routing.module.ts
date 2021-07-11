@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'directives', component: DirectivesComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'input-output', component: ParentComponent},
-  {path: 'form', component: TemplateDrivenFormComponent},
+  {path: 'template-driven-form', component: TemplateDrivenFormComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
