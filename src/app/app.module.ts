@@ -17,6 +17,7 @@ import { ChildComponent } from './input-output/child/child.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ComponentAComponent } from './services/component-a/component-a.component';
 import { ComponentBComponent } from './services/component-b/component-b.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ComponentBComponent } from './services/component-b/component-b.componen
     ChildComponent,
     TemplateDrivenFormComponent,
     ComponentAComponent,
-    ComponentBComponent
+    ComponentBComponent,
+    RxjsComponent
   ],
   imports: [
     BrowserModule,

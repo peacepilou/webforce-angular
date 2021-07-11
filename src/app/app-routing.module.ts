@@ -5,6 +5,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { HomeComponent } from './home/home.component';
 import { ParentComponent } from './input-output/parent/parent.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 import { ComponentAComponent } from './services/component-a/component-a.component';
 import { ComponentBComponent } from './services/component-b/component-b.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'template-driven-form', component: TemplateDrivenFormComponent},
   {path: 'component-a', component: ComponentAComponent},
   {path: 'component-b', component: ComponentBComponent},
+  {path: 'rxjs', component: RxjsComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
