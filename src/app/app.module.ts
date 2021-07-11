@@ -15,6 +15,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ParentComponent } from './input-output/parent/parent.component';
 import { ChildComponent } from './input-output/child/child.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ComponentAComponent } from './services/component-a/component-a.component';
+import { ComponentBComponent } from './services/component-b/component-b.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     FooterComponent,
     ParentComponent,
     ChildComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    ComponentAComponent,
+    ComponentBComponent
   ],
   imports: [
     BrowserModule,
