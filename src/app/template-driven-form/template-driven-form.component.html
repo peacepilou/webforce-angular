@@ -1,0 +1,72 @@
+<section>
+  <form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit()">
+  
+      <div>
+        <label for="title-order">Title</label>
+        <input name="title-order" id="title-order" type="text" [(ngModel)]="order.title" #title="ngModel" required minlength="5">
+      </div>
+      <!-- Message d'erreurs -->
+      <div *ngIf="myForm.submitted && title.errors" [ngStyle]="{color: title.errors ? 'red' : ''}">
+          <span *ngIf="title.errors?.required">Le titre est requis</span>
+          <span *ngIf="title.errors?.minlength">La longueur maximale doit être supérieure à 5</span>
+      </div>
+  
+      <div>
+        <label for="quantity-order">Quantité</label>
+        <input name="quantity-order" id="quantity-order" [(ngModel)]="order.quantity" #quantity="ngModel" type="number" required >
+      </div>
+      <!-- Message d'erreurs -->
+      <div *ngIf="myForm.submitted && title.errors" [ngStyle]="{color: title.errors ? 'red' : ''}">
+          <span *ngIf="quantity.errors?.required">La quantité est requise</span>
+      </div>
+  
+      <div>
+        <label for="date-order">Date de commande</label>
+        <input name="date-order" id="date-order" type="date" [(ngModel)]="order.date" #date="ngModel" required>
+      </div>
+      <!-- Message d'erreurs -->
+      <div *ngIf="myForm.submitted && date.errors" [ngStyle]="{color: date.errors ? 'red' : ''}">
+          <span *ngIf="date.errors?.required">La date est requise</span>
+      </div>
+  
+      <div>
+        <label for="contact-order">Contact</label>
+        <input name="contact-order" id="contact-order" type="text" [(ngModel)]="order.contact" #contact="ngModel" required email>
+      </div>
+      <!-- Message d'erreurs -->
+      <div *ngIf="myForm.submitted && contact.errors" [ngStyle]="{color: contact.errors ? 'red' : ''}">
+          <span *ngIf="contact.errors?.required">Le champ email est requis</span>
+          <span *ngIf="contact.errors?.email ">L'adresse email doit être valide</span>
+      </div>
+  
+      <div>
+          <button type="reset">Restaurer</button>
+          <button type="submit">Sauvegarder</button>
+      </div>
+  
+      <div *ngIf="myForm.submitted && myForm.valid" id="order-result">
+          <h2>Votre commande en cours:</h2>
+          <p>Titre:  {{order.title}}</p> 
+          <p>Quantité : {{order.quantity}}</p>
+          <p>Date : {{order.date}}</p>
+          <p>Contact : {{order.contact}}</p>
+      </div>
+      <div *ngIf="myForm.submitted && !myForm.valid" [ngStyle]="{color: !myForm.valid ? 'red' : ''}">
+          Le formulaire n'est pas valide. Merci de vérifier les champs :)
+      </div>
+  
+    </form>
+    <div id="orders-container">
+      <h2>Votre liste de commandes :</h2>
+      <div *ngFor="let order of orderList; let i = index" id="order-card">
+        <p>Commande n°{{i+1}}</p>
+        <p>Titre:  {{order.title}}</p> 
+        <p>Quantité : {{order.quantity}}</p>
+        <p>Date : {{order.date}}</p>
+        <p>Contact : {{order.contact}}</p>
+      </div>
+    </div>
+    
+  </section>
+
+ 

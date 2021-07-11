@@ -1,0 +1,33 @@
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+div {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+#order-result {
+    display: flex;
+    flex-direction: column;
+}
+form {
+    width: 30%;
+    margin-right: 10%;
+}
+#orders-container {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap
+    ;
+    #order-card {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        padding: 1em;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px 1px black;
+    }
+}
