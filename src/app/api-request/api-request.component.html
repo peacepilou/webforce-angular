@@ -1,0 +1,26 @@
+<h1>Afficher un nombre précis de citations </h1>
+
+<label for="quotes">Entrer le nombre de citations à faire apparaître</label>
+<input type="number" min="2" id="quote" [(ngModel)]="numberOfQuotes1">
+<button (click)="getRandomQuotes()">Go !</button>
+
+<div *ngFor="let quote of randomQuotes">
+  <p>"{{quote.sentence}}", <b>{{quote.character.name}}</b> <span *ngIf="quote.character.house.name">, {{quote.character.house.name}}</span> </p>
+</div>
+
+<h1>Afficher un nombre précis de citations d'un personnage en particulier </h1>
+
+<label for="quotes">Entrer le nombre de citations à faire apparaître</label>
+<input type="number" min="2" id="quote" [(ngModel)]="numberOfQuotes2">
+<br>
+<label for="name">Entrer le nom du personnage</label>
+<input type="text" id="name" [(ngModel)]="name">
+<button (click)="getRandomQuotesForACharacter()">Go !</button>
+<br>
+<span *ngIf="randomQuotesForACharacter[0]">Citations de : {{randomQuotesForACharacter[0].character.name}}</span>
+<div *ngFor="let quote of randomQuotesForACharacter">
+  <p>{{quote.sentence}}</p>
+</div>
+<br>
+<br>
+<button (click)="refresh()">Rafraîchir</button>

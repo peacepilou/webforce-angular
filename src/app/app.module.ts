@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-// Ajoute celle ligne là
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +17,8 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { ComponentAComponent } from './services/component-a/component-a.component';
 import { ComponentBComponent } from './services/component-b/component-b.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiRequestComponent } from './api-request/api-request.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +34,14 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     TemplateDrivenFormComponent,
     ComponentAComponent,
     ComponentBComponent,
-    RxjsComponent
+    RxjsComponent,
+    ApiRequestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, // Et celle-ci
+    FormsModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

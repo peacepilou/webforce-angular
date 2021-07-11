@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ApiRequestComponent } from './api-request/api-request.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { HomeComponent } from './home/home.component';
 import { ParentComponent } from './input-output/parent/parent.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'component-a', component: ComponentAComponent},
   {path: 'component-b', component: ComponentBComponent},
   {path: 'rxjs', component: RxjsComponent},
+  {path: 'api-request', component: ApiRequestComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
