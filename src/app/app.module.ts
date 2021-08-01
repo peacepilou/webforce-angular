@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiRequestComponent } from './api-request/api-request.component';
 import { RoutingComponent } from './routing/routing.component';
 import { RoutingDetailsComponent } from './routing/routing-details/routing-details.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { ExponentialPipe } from './core/exponential.pipe';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { RoutingDetailsComponent } from './routing/routing-details/routing-detai
     RxjsComponent,
     ApiRequestComponent,
     RoutingComponent,
-    RoutingDetailsComponent
+    RoutingDetailsComponent,
+    PipesComponent,
+    ExponentialPipe
   ],
   imports: [
     BrowserModule,

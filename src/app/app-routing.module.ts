@@ -6,6 +6,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { HomeComponent } from './home/home.component';
 import { ParentComponent } from './input-output/parent/parent.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PipesComponent } from './pipes/pipes.component';
 import { RoutingDetailsComponent } from './routing/routing-details/routing-details.component';
 import { RoutingComponent } from './routing/routing.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'api-request', component: ApiRequestComponent},
   {path: 'users', component: RoutingComponent},
   {path: 'users/user/:id', component: RoutingDetailsComponent},
+  {path: 'pipes', component: PipesComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
