@@ -19,6 +19,8 @@ import { ComponentBComponent } from './services/component-b/component-b.componen
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiRequestComponent } from './api-request/api-request.component';
+import { RoutingComponent } from './routing/routing.component';
+import { RoutingDetailsComponent } from './routing/routing-details/routing-details.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ApiRequestComponent } from './api-request/api-request.component';
     ComponentAComponent,
     ComponentBComponent,
     RxjsComponent,
-    ApiRequestComponent
+    ApiRequestComponent,
+    RoutingComponent,
+    RoutingDetailsComponent
   ],
   imports: [
     BrowserModule,

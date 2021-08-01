@@ -17,7 +17,11 @@
 <input type="text" id="name" [(ngModel)]="name">
 <button (click)="getRandomQuotesForACharacter()">Go !</button>
 <br>
-<span *ngIf="randomQuotesForACharacter[0]">Citations de : {{randomQuotesForACharacter[0].character.name}}</span>
+
+<span *ngIf="randomQuotesForACharacter[0]">
+    Citations de : {{randomQuotesForACharacter[0].character.name}}
+</span>
+
 <div *ngFor="let quote of randomQuotesForACharacter">
   <p>{{quote.sentence}}</p>
 </div>
